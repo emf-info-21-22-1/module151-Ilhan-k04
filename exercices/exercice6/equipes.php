@@ -12,7 +12,7 @@
         <td>Club</td>
       </tr>
       <?php
-        require('ctrl.php');
+        include_once("ctrl.php");
         $ctrl = new Ctrl();
         $equipes = $ctrl->getEquipes();
         $index = 1;
