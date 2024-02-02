@@ -3,6 +3,7 @@
  *
  * @author Olivier Neuhaus
  * @version 1.0 / 20-SEP-2013
+ * moi
  */
 
 var BASE_URL = "http://localhost:8081/serveur.php";
