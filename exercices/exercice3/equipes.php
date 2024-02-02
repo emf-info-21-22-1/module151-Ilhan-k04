@@ -13,7 +13,12 @@
       </tr>
       <?php
         require('ctrl.php');
-        // A compléter....
+        $equipes = getEquipes();
+        $index = 1;
+        foreach($equipes as $equipe ){
+          echo "<tr><td>".$index."</td><td>". $equipe."</td></tr>";
+          $index++;
+        }
       ?>
       </table>
     </div>
