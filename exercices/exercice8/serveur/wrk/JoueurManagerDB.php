@@ -6,7 +6,7 @@ class JoueursDBManager{
   
   public function __construct(){
     
-    $this->connexion = connexion::getInstance();
+    $this->connexion = Connexion::getInstance();
   }
   
   public function getJoueurs($equipeId){

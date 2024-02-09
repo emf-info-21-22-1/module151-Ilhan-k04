@@ -6,7 +6,7 @@ class EquipesDBManager{
   
   public function __construct(){
     
-    $this->connexion = connexion::getInstance();
+    $this->connexion = Connexion::getInstance();
   }
   
   public function getEquipes(){

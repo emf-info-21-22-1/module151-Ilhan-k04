@@ -1,5 +1,5 @@
 <?php
-require_once('wrk/EquipesDBManager.php');
+require_once('wrk/EquipeManagerDB.php');
 class EquipeCtrl{
   
   private $manager;  

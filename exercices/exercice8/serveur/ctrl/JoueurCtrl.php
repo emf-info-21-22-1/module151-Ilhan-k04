@@ -1,6 +1,6 @@
 <?php
-require_once('wrk/EquipesDBManager.php');
-require_once('wrk/JoueursDBManager.php');
+require_once('wrk/EquipeManagerDB.php');
+require_once('wrk/JoueurManagerDB.php');
 class JoueurCtrl{
   
   private $manager;
