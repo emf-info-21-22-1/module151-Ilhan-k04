@@ -1,6 +1,7 @@
 <?php
 
 require_once("Wrk/reservationDBManager.php");
+include_once("Beans/hotel.php");
 
 class reservationManager
 {
@@ -27,20 +28,34 @@ class reservationManager
         }
         return json_encode($result);
     }
+    
+
     public function addReservation($date, $nombreReservation, $fk_hotel, $fk_utilisateur)
     {
-        if ($this->manager->addReservation($date, $nombreReservation, $fk_hotel, $fk_utilisateur)) {
-            http_response_code(200);
+        if (!empty($date) && !empty($nombreReservation) && !empty($fk_hotel) && !empty($fk_utilisateur)) {
+            $result = $this->manager->addReservation($date, $nombreReservation, $fk_hotel, $fk_utilisateur);
+            if ($result) {
+                
+                http_response_code(200);
+            } else {
+                http_response_code(401);
+            }
+
         } else {
-            http_response_code(401);
+            http_response_code(400);
         }
     }
     public function deleteReservation($pk_reservation)
     {
-        if ($this->manager->deleteReservation($pk_reservation)) {
-            http_response_code(200);
-        }else{
-            http_response_code(401);
+        if (!empty($pk_reservation)) {
+            $result = $this->manager->deleteReservation($pk_reservation);
+            if ($result) {
+                http_response_code(200);
+            } else {
+                http_response_code(401);
+            }
+        } else {
+            http_response_code(400);
         }
     }
 }

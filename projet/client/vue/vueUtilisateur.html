@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Projet 151 / index</title>
+    <title>Projet 151 / utilisateur</title>
     <meta charset="utf-8">
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' href='style/style.css'>
-    <link rel="stylesheet" type="text/css" href="style/evo-calendar.css"/>
+    <link rel='stylesheet' type='text/css' href='../style/style.css'>
+    <link rel="stylesheet" type="text/css" href="../style/evo-calendar.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script type="text/javascript" src="javascripts/helpers/evo-calendar.min.js"></script>
-    <script type="text/javascript" src="javascripts/controller/evo-calendar.js"></script>
-    <script type="text/javascript" src="javascripts/controller/indexCtrl.js"></script>
+    <script type="text/javascript" src="../javascripts/helpers/evo-calendar.min.js"></script>
+    <script type="text/javascript" src="../javascripts/controller/evo-calendar.js"></script>
+    <script type="text/javascript" src="../javascripts/controller/indexCtrl.js"></script>
   </head>
   <body>
     <header>
       <h1>TravelFinder</h1>
-      <form action="./vue/vueLogin.html">
-        <button type="submit">Connexion</button>
+      <form action="../index.html">
+        <button type="submit">Deconnexion</button>
       </form>
+      <a href="./vueMesReservations.html">Mes reservations</a>
     </header>
     <div>
       <div id="calendar"></div>
@@ -37,8 +38,8 @@
         <label for="Londres">Londres</label><br>
       
       </form>
-      <!-- METTRE LES HOTELS SANS LIEN VERS vueReservation.html-->
 
+      <!-- METTRE LES HOTELS AVEC LIEN VERS vueReservation.html-->
     </div>
   </body>
 </html>

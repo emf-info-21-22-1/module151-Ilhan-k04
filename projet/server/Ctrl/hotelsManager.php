@@ -26,5 +26,27 @@ class hotelsManager
         return json_encode($result);
     }
 
+    public function getLieuHotelJSON(){
+        $hotels = $this->manager->getHotels();
+        $result = array();
+        foreach($hotels as $hotel){
+            $result[] = array(
+                "lieu" => $hotel->getLieu()
+            );
+        }
+        return json_encode($result);
+    }
+
+    public function getNomHotelJson(){
+        $hotels = $this->manager->getHotels();
+        $result = array();
+        foreach($hotels as $hotel){
+            $result[] = array(
+                "nom" => $hotel->getNom()
+            );
+        }
+        return json_encode($result);
+    }
+
 }
 ?>

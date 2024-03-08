@@ -3,18 +3,17 @@
 class Reservation
 {
     // Attributs de la classe Reservation
-    private $date;
+    private $dateReservation;
     private $nombreReservation;
     private $pk_reservation;
     private $fk_hotel;
     private $fk_utilisateur;
 
     // Constructeur de la classe Reservation
-    public function __construct($date, $nombreReservation, $pk_reservation, $fk_hotel, $fk_utilisateur)
+    public function __construct($dateReservation, $nombreReservation, $fk_hotel, $fk_utilisateur)
     {
-        $this->date = $date;
+        $this->dateReservation = $dateReservation;
         $this->nombreReservation = $nombreReservation;
-        $this->pk_reservation = $pk_reservation;
         $this->fk_hotel = $fk_hotel;
         $this->fk_utilisateur = $fk_utilisateur;
     }
@@ -22,7 +21,7 @@ class Reservation
     // Méthodes pour accéder aux attributs (getters)
     public function getDate()
     {
-        return $this->date;
+        return $this->dateReservation;
     }
 
     public function getNombreReservation()
@@ -46,9 +45,9 @@ class Reservation
     }
 
     // Méthodes pour modifier les attributs (setters)
-    public function setDate($date)
+    public function setDate($dateReservation)
     {
-        $this->date = $date;
+        $this->dateReservation = $dateReservation;
     }
 
     public function setNombreReservation($nombreReservation)
